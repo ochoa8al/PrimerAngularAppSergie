@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class PadreComponent {
 
   contador: number = 0;
+  paramPadre = "Mesaje desde el componente padre";
   
   incrementar()
   {
