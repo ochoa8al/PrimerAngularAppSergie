@@ -6,3 +6,21 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+
+  .componente{
+    border-radius: 20px;
+    border-style: solid;
+    background-color: antiquewhite;
+    padding: 0 0 0 20px;
+    margin: 50px;
+  }
+
+  .componente.HijoAPadre{
+    border: solid 5px;
+    background-color: dimgray;
+}
+
+.componente.PadreAHijo{
+  border: solid 5px;
+  background-color: dimgray;
+}

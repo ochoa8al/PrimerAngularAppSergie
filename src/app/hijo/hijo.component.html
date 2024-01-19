@@ -1,4 +1,10 @@
-<p>Componente Hijo</p>
-<p>Param recibido desde el padre:</p>
-<br>
-<p> <span>{{paramHijo}}</span></p>
+<section class="componente">
+    <h3>Componente Hijo</h3>
+    <label for="mensajeHijo">Ingrese el valor que desea enviar al padre</label>
+    <input [(ngModel)]="mensajeHijo" type="text" name="mensajeHijo" id="mensajeHijo" placeholder="Manuel Aguilar">
+    <button (click) = "enviarMensaje()">Enviar</button>
+</section>
+<section class="componente">
+    <h3>Mensaje Recibido del Padre:</h3>
+    <strong>{{recibirMensajeDelPadre}}</strong>
+</section>

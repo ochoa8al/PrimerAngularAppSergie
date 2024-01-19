@@ -1,8 +1,12 @@
-<h1>Contador:</h1>
-<p>{{contador}}</p>
-<button (click)="incrementar()">Incrementar (+)</button>
-<button (click)="decrementar()">Decrementar (-)</button>
-
-<p>Pasando datos del padre al hijo</p>
-<br>
-<app-hijo [paramHijo] = "paramPadre"/>
+<section class="componente HijoAPadre">
+    <h3>Enviando datos del hijo al Padre</h3>
+    <section class="componente">
+        <h3>Componente Padre</h3>
+        <p>Mensaje recibido del hijo: <strong>{{mensaje}}</strong> </p>
+        <h3>Enviar un mensaje al Hijo</h3>
+        <label for="enviarmensajehijo"></label>
+        <input type="text" name="enviarmensajehijo" id="enviarmensajehijo" [(ngModel)]="enviarMensaje">
+    </section>
+    
+    <app-hijo (EventoDelUsuario)="recibirMensajeDelHijo($event)" [recibirMensajeDelPadre]="enviarMensaje"/>
+</section>
