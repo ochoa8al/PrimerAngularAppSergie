@@ -6,16 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./padre.component.css']
 })
 export class PadreComponent {
-
-  contador: number = 0;
-  paramPadre = "Mesaje desde el componente padre";
   
-  incrementar()
+  mensaje?:string
+  enviarMensaje?:string;
+
+  recibirMensajeDelHijo(mensajeDelHijo:string)
   {
-    this.contador++
+    this.mensaje = mensajeDelHijo;
   }
-  decrementar()
-  {
-    this.contador--
-  }
+
+  
 }
